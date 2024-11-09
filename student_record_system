@@ -1,0 +1,83 @@
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_STUDENTS 100
+
+int roll_numbers[MAX_STUDENTS];
+char names[MAX_STUDENTS][50];
+float marks[MAX_STUDENTS];
+int num_students = 0;
+
+void addStudent(int roll, char name[], float mark) {
+    if (num_students < MAX_STUDENTS) {
+        roll_numbers[num_students] = roll;
+        strcpy(names[num_students], name);
+        marks[num_students] = mark;
+        num_students++;
+        printf("Student added successfully!\n");
+    } else {
+        printf("Maximum student limit reached.\n");
+    }
+}
+
+void displayStudents() {
+    if (num_students == 0) {
+        printf("No students to display.\n");
+        return;
+    }
+    
+    printf("Roll No.\tName\t\tMarks\n");
+    for (int i = 0; i < num_students; i++) {
+        printf("%d\t\t%s\t\t%.2f\n", roll_numbers[i], names[i], marks[i]);
+    }
+}
+
+void searchStudent(int roll) {
+    for (int i = 0; i < num_students; i++) {
+        if (roll_numbers[i] == roll) {
+            printf("Record found:\n");
+            printf("Roll No.: %d\nName: %s\nMarks: %.2f\n", roll_numbers[i], names[i], marks[i]);
+            return;
+        }
+    }
+    printf("No record found with roll number %d.\n", roll);
+}
+
+int main() {
+    int choice, roll;
+    char name[50];
+    float mark;
+
+    while (1) {
+        printf("\nStudent Record System\n");
+        printf("1. Add Student\n2. Display Students\n3. Search Student\n4. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                printf("Enter roll number: ");
+                scanf("%d", &roll);
+                printf("Enter name: ");
+                scanf(" %[^\n]", name);  
+                printf("Enter marks: ");
+                scanf("%f", &mark);
+                addStudent(roll, name, mark);
+                break;
+            case 2:
+                displayStudents();
+                break;
+            case 3:
+                printf("Enter roll number to search: ");
+                scanf("%d", &roll);
+                searchStudent(roll);
+                break;
+            case 4:
+                printf("Exiting...\n");
+                return 0;
+            default:
+                printf("Invalid choice. Please try again.\n");
+        }
+    }
+    return 0;
+}
