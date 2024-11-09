@@ -3,10 +3,10 @@ This student record system actually contains name ,roll no. and marks of a stude
 
 ## Concept Used
 ### Made functions to add,display,search:
-void addStudent()-Function to add a student record 
-void displayStudents()-Function to display all student records
-void searchStudent()-Function to search for a student by roll number
+#### void addStudent()-Function to add a student record 
+#### void displayStudents()-Function to display all student records
+#### void searchStudent()-Function to search for a student by roll number
 
-Used Switch Case statements for choices for add or display or search or exit.
+#### Used Switch Case statements for choices for add or display or search or exit.
 
 
