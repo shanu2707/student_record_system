@@ -1,5 +1,5 @@
 # student_record_system
-This student record system actually contains ##### name ,roll no. and marks of a student which can manage the record of each and every student in a manner.
+##### This student record system actually contains name ,roll no. and marks of a student which can manage the record of each and every student in a manner.
 
 ## Concept Used
 #### Used #include<string.h> header file.
