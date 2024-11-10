@@ -3,6 +3,7 @@ This student record system actually contains name ,roll no. and marks of a stude
 
 ## Concept Used
 #### Used #include<string.h> header file.
+Used macros #define MAX_STUDENTS 100 for create memory space for 100 entries.
 ### Made functions to add,display,search:
 #### void addStudent()-Function to add a student record 
 #### void displayStudents()-Function to display all student records
