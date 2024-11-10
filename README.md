@@ -2,6 +2,7 @@
 This student record system actually contains name ,roll no. and marks of a student which can manage the record of each and every student in a manner.
 
 ## Concept Used
+#### Used #include<string.h> header file.
 ### Made functions to add,display,search:
 #### void addStudent()-Function to add a student record 
 #### void displayStudents()-Function to display all student records
